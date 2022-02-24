@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{{ url_for('test')}}" method="post">
+    <h2 style="font-size: 62px; text-align: center; ">Sentiment analysis</h2>
+    <h3 style="margin:  10px 0 40px; font-size: 14px; color: #fff; text-align: center; ">Nhập văn bản</h3>
+    <input id="first" name="input" required="required">
+    <br>
+    <br><br><button style="    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;" id="sub" type="submit ">Checking</button>
+</form>
+<br><br>
+{% endblock %}

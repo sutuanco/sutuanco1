@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>cuongpc0128</title>
+</head>
+
+<body> 
+    <section class="header">
+        <nav>
+            <a href="index.html"> <img src=""> </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ url_for('home')}}">HOME</a></li>
+                    <li><a href="{{ url_for('test')}}">TEST</a></li>
+                    <li><a href="https://www.facebook.com/cuongpc0128" target="_blank">CONTACT</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    
+
+        <img src="https://adswerve.com/wp-content/uploads/2020/09/Sentiment_Analysis_AdswerveBlogPostImage.jpg">
+        <br>
+
+        {% block content %}{% endblock %}
+        <br><br>
+        {% for message in get_flashed_messages() %}
+            <h3>{{ message }}</h3>
+        {% endfor %}
+    </section>
+
+</body>
+
+</html>
